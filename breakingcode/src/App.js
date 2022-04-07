@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, from 'react';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+
 
 // site name logo links: 
 {/* <a href="https://fontmeme.com/glow-effect/"><img src="https://fontmeme.com/permalink/220407/44b48602aece6ef848ce1922e1deee76.png" alt="glow-effect" border="0"></a>

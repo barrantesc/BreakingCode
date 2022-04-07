@@ -70,7 +70,7 @@ const SignupForm = () => {
           Something went wrong with your signup!
         </Alert>
 
-        <Form.Group>
+        <Form.Field>
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
             type='text'
@@ -81,9 +81,9 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Field>
 
-        <Form.Group>
+        <Form.Field>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='email'
@@ -94,9 +94,9 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Field>
 
-        <Form.Group>
+        <Form.Field>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
@@ -107,7 +107,7 @@ const SignupForm = () => {
             required
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-        </Form.Group>
+        </Form.Field>
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'

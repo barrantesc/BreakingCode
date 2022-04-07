@@ -1,31 +1,42 @@
-// import React, from 'react';
-// import Header from './components/Header';
-// import Footer from './components/Footer';
+import React, {useState} from 'react';
+import Header from './components/Header';
+import Pages from './components/Pages';
+import Footer from './components/Footer';
+// import login from './components/loginForm';
+// import signup from './components/signupForm';
 
-
-// site name logo links: 
-{/* <a href="https://fontmeme.com/glow-effect/"><img src="https://fontmeme.com/permalink/220407/44b48602aece6ef848ce1922e1deee76.png" alt="glow-effect" border="0"></a>
-https://fontmeme.com/permalink/220407/44b48602aece6ef848ce1922e1deee76.png */}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  // arr of nav links
+  const [navLinks] = useState([
+    "About", 
+    "Game",
+    "Scoreboard",
+    "Contact", 
+  ]);
 
-export default App;
+   // set current display based on nav link selection
+   const [currentDisplay, setCurrentDisplay] = useState(navLinks[0]);
+   const [contactSelected, setContactSelected] = useState(false);
+   return (
+     <div>
+         {/* passing nav links and current display settings on to header as props */}
+         <Header
+           navLinks={navLinks}
+           currentDisplay={currentDisplay}
+           setCurrentDisplay={setCurrentDisplay}
+           contactSelected={contactSelected}
+           setContactSelected={setContactSelected}
+         ></Header>
+ 
+         {/* passing current display settings on to main section as props */}
+         <Pages
+           currentDisplay={currentDisplay}
+         ></Pages>
+ 
+         <Footer></Footer>
+     </div>
+   );
+ }
+ 
+ export default App;

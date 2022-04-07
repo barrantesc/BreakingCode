@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Header from './components/Header';
-import Pages from './components/Pages';
+import Main from './components/Main'
+import Pages from './Pages';
 import Footer from './components/Footer';
 // import login from './components/loginForm';
 // import signup from './components/signupForm';
@@ -30,9 +31,9 @@ function App() {
          ></Header>
  
          {/* passing current display settings on to main section as props */}
-         <Pages
+         <Main
            currentDisplay={currentDisplay}
-         ></Pages>
+         ></Main>
  
          <Footer></Footer>
      </div>

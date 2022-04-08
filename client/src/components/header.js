@@ -1,7 +1,7 @@
 import React from "react";
-import Nav from "./Nav";
+import Nav from "./nav";
 import Navbar from 'react-bulma-components/lib/components/navbar';
-import Auth from '../../utils/auth';
+import Auth from '../utils/auth';
 
 function Header(props) {
 

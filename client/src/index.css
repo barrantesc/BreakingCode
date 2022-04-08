@@ -3,6 +3,7 @@
 :root {
   --emerald: #026635;
   --dark: #181818;
+  --white: #ffff;
 }
 
 * {
@@ -27,7 +28,7 @@ body {
 
 .about {
   text-align: left;
-  background-color: var(--lavender);
+  background-color: var(--emerald);
   max-width: 50%;
   border-radius: 10px;
   padding: 4% 6%;
@@ -37,4 +38,82 @@ body {
   font-size: 1.5em;
   cursor: default;
   box-shadow: var(--emerald) 1px solid;
+}
+
+/* Contact */
+/* contact */
+#contact-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 2% 0;
+  background-color: var(--emerald);
+  color: #f5f5f5;
+  opacity: 75%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 1px var(--dark);
+}
+
+#contact-section div {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 100%;
+}
+
+#contact-section input,
+#contact-section textarea {
+  margin: 5px 0 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--emerald);
+}
+
+#contact-section input:focus,
+#contact-section textarea:focus {
+  outline: none;
+  border: 1.5px solid var(--emerald);
+}
+
+.submit-btn {
+  background-color: var(--emerald);
+  padding: 8px;
+  color: white;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: var(--white);
+}
+
+.error-msg p {
+  color: #ab3a2b;
+  font-style: italic;
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer span {
+  justify-content: space-around;
+  padding: 10px 5%;
+}
+
+.icon-link {
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.icon-link:hover {
+  color: var(--emerald);
 }

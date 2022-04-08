@@ -1,43 +1,57 @@
-import React, {useState} from 'react';
-import Header from './components/Header';
-import Main from './components/Main'
-import Pages from './Pages';
-import Footer from './components/Footer';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+
+import Header from './components/header';
+import About from '.components/about';
+import Contact from '.components/contact';
+import Game from '.components/game';
+import Scoreboard from '.components/scoreboard';
+import Footer from './components/footer';
 // import login from './components/loginForm';
 // import signup from './components/signupForm';
 
+// const httpLink = createHttpLink({
+//   uri: '/graphql',
+// });
 
-function App() {
-  // arr of nav links
-  const [navLinks] = useState([
-    "About", 
-    "Game",
-    "Scoreboard",
-    "Contact", 
-  ]);
+// const authLink = setContext((_, { headers }) => {
+//   const token = localStorage.getItem('id_token');
+//   return {
+//     headers: {
+//       ...headers,
+//       authorization: token ? `Bearer ${token}` : '',
+//     },
+//   };
+// });
 
-   // set current display based on nav link selection
-   const [currentDisplay, setCurrentDisplay] = useState(navLinks[0]);
-   const [contactSelected, setContactSelected] = useState(false);
-   return (
-     <div>
-         {/* passing nav links and current display settings on to header as props */}
-         <Header
-           navLinks={navLinks}
-           currentDisplay={currentDisplay}
-           setCurrentDisplay={setCurrentDisplay}
-           contactSelected={contactSelected}
-           setContactSelected={setContactSelected}
-         ></Header>
- 
-         {/* passing current display settings on to main section as props */}
-         <Main
-           currentDisplay={currentDisplay}
-         ></Main>
- 
-         <Footer></Footer>
-     </div>
-   );
- }
- 
+// const client = new ApolloClient({
+//   link: authLink.concat(httpLink),
+//   cache: new InMemoryCache(),
+// });
+
+function App () {
+  return (
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="container">
+            <Switch>
+            {/* pages */}
+            </Switch>
+          </div>
+          <Footer />
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
+}
+
  export default App;

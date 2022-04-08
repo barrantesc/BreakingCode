@@ -1,6 +1,6 @@
-import Icon from '../Icon';
+import Icon from './icon.';
 import React from 'react';
-import { LINKS } from '../../utils/footerLinks.js';
+import { LINKS } from '../utils/footerLinks';
 
 function Footer() {
 	return (

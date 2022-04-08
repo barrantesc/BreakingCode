@@ -20,7 +20,10 @@ const cardSchema = new Schema(
         },
         stat: {
             type: String,
-            
+        },
+        topic: {
+            type: String,
+            required: true
         }
     },
     // add virtuals

@@ -31,6 +31,7 @@ function Game () {
     // apply random id
     .map((card) => ({ ...card, id: Math.random() }))
     
+    
     setChoiceOne(null)
     setChoiceTwo(null)
     setCards(shuffledCards)

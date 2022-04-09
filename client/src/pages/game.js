@@ -97,10 +97,10 @@ function Game () {
         {cards.map(card => (
           <SingleCard 
             key={card.id} 
-            card={card}> 
+            card={card} 
             handleChoice={handleChoice} 
             flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
+            disabled={disabled}>
           </SingleCard>
         ))}
       </div>

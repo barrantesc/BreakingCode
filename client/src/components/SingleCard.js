@@ -1,7 +1,8 @@
 // js and html for the memory game
-
 import React from 'react'
-import "./singleCard.css"
+import "./SingleCard.css"
+import Cover from '../assets/cover.jpeg'
+// import ReactCardFlip from 'react-card-flip';
 
 export default function singleCard( {card, handleChoice, flipped, disabled }) {
 
@@ -18,7 +19,7 @@ export default function singleCard( {card, handleChoice, flipped, disabled }) {
             <img className='front' src={card.src} alt="card front"/>
             <img 
                 className='back' 
-                src="./img/cover.jpeg" 
+                src={Cover} 
                 onClick={handleClick} 
                 alt="back cover"
             />

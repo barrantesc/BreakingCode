@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@apollo/client": "^3.5.10",
+    "@emailjs/browser": "^3.5.0",
+    "bulma": "^0.9.3",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

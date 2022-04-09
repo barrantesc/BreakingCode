@@ -1,19 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import {
+//   ApolloClient,
+//   InMemoryCache,
+//   ApolloProvider,
+//   createHttpLink,
+// } from '@apollo/client';
+// import { setContext } from '@apollo/client/link/context';
 
-import Header from './components/header';
-import About from '.components/about';
-import Contact from '.components/contact';
-import Game from '.components/game';
-import Scoreboard from '.components/scoreboard';
-import Footer from './components/footer';
+// import Header from './components/header';
+// import About from '.components/about';
+// import Contact from '.components/contact';
+import Game from '../src/pages/game';
+// import Scoreboard from '.components/scoreboard';
+// import Footer from './components/footer';
 // import login from './components/loginForm';
 // import signup from './components/signupForm';
 
@@ -38,19 +38,24 @@ import Footer from './components/footer';
 
 function App () {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Switch>
+    
+    // <ApolloProvider client={client}>
+     <> 
+     <Game></Game>
+      {/* <Router> */}
+        {/* <div className="flex-column justify-flex-start min-100-vh"> */}
+          {/* <Header /> */}
+          {/* <div className="container"> */}
+            {/* <Routes> */}
             {/* pages */}
-            </Switch>
-          </div>
-          <Footer />
-        </div>
-      </Router>
-    </ApolloProvider>
+            {/* <Route exact path="/game" component={Game} /> */}
+            {/* </Routes> */}
+          {/* </div> */}
+          {/* <Footer /> */}
+        {/* </div> */}
+      {/* </Router> */}
+    {/* // </ApolloProvider> */}
+    </>
   );
 }
 

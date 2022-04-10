@@ -419,7 +419,7 @@ const cardSeedData = [
 }
 ]
 
-// let i = 31;
+// let i = 1;
 // cardSeedData.map(n => {
 //   n["uid"] = i;
 //   i++;

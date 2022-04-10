@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import validateEmail from "../../../utils/helpers";
+import validateEmail from '../utils/helpers';
 import emailjs from "@emailjs/browser";
 
 function Contact() {
@@ -60,7 +60,7 @@ function Contact() {
 
     return (
         <div>
-            <h2>Lets Work Together!</h2>
+            <h2>Contact Us</h2>
             {/* add a section talking about contributing/etc */}
             <form id="contact-section" ref={form} onSubmit={handleSubmit}>
                 <div>

@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { setContext } from '@apollo/client/link/context';
 
 // import Header from './components/header';
-// import About from '.components/about';
-// import Contact from '.components/contact';
+// import About from '../src/pages/about';
+// import Contact from '../src/pages/contact';
 import Game from '../src/pages/game';
-// import Scoreboard from '.components/scoreboard';
+// import Scoreboard from '../src/pages/scoreboard';
 // import Footer from './components/footer';
 // import login from './components/loginForm';
 // import signup from './components/signupForm';

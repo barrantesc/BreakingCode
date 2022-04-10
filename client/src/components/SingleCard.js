@@ -1,6 +1,6 @@
 // js and html for the memory game
 import React from 'react'
-import "./SingleCard.css"
+import "./singleCard.css"
 import Cover from '../assets/cover.jpeg'
 // import ReactCardFlip from 'react-card-flip';
 

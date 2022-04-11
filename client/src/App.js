@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bulma/css/bulma.min.css';
+// import 'bulma/css/bulma.min.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import {
 //   ApolloClient,
@@ -11,12 +11,32 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/header';
 // import About from '../src/pages/about';
-// import Contact from './components/contact';
+// import Contact from '../src/pages/contact';
 import Game from '../src/pages/game';
 // import Scoreboard from '../src/pages/scoreboard';
 import Footer from './components/footer';
-// import login from './components/loginForm';
-// import signup from './components/signupForm';
+// import Contact from '../src/pages/contact';
+// import Login from './pages/login';
+// import Login from './components/login';
+// import Signup from './components/signup';
+
+
+function App() {
+  return (
+    <>
+      <Header />
+      <switch>
+        <Game></Game>
+      </switch>
+
+      <Footer />
+
+    </>
+  );
+}
+
+export default App;
+
 
 // const httpLink = createHttpLink({
 //   uri: '/graphql',
@@ -37,28 +57,27 @@ import Footer from './components/footer';
 //   cache: new InMemoryCache(),
 // });
 
-function App() {
-  return (
+// function App() {
+//   return (
+//     <ApolloProvider client={client}>
+//       <Router>
+//         <div className="flex-column justify-flex-start min-100-vh">
+//           <Header />
+//           <div className="container">
+//             <Switch>
+//               <Route exact path="/" component={About} />
+//               <Route exact path="/login" component={Login} />
+//               <Route exact path="/signup" component={Signup} />
+//               <Route exact path="/ccntact" component={Contact} />
+//               <Route exact path="/game" component={Game} />
+//               <Route exact path="/scoreboard" component={Scoreboard} />
+//             </Switch>
+//           </div>
+//           <Footer />
+//         </div>
+//       </Router>
+//     </ApolloProvider>
+//   );
+// }
 
-    // <ApolloProvider client={client}>
-    <>
-      <Header />
-
-      <Game></Game>
-      {/* <Router> */}
-      {/* <div className="flex-column justify-flex-start min-100-vh"> */}
-      {/* <div className="container"> */}
-      {/* <Routes> */}
-      {/* pages */}
-      {/* <Route exact path="/game" component={Game} /> */}
-      {/* </Routes> */}
-      {/* </div> */}
-      <Footer />
-      {/* </div> */}
-      {/* </Router> */}
-      {/* // </ApolloProvider> */}
-    </>
-  );
-}
-
-export default App;
+// export default App;

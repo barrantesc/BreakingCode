@@ -2,9 +2,8 @@ import React from 'react';
 function About() {
 
     return (
-        <section>
-            {/* jumbotrom image of BC-banner */}
-            <div className='about-container'>
+        <section class="hero">
+            <div class="about-container">
                 {/* about section */}
                 <aside className='about'>
                     Welcome to Breaking Code! <br />
@@ -15,7 +14,7 @@ function About() {
                     <br />
                     The Goal is to match the correct square to the question given and for each correct question <br />
                     the user will receive points and at the end of the quiz see how they did out of array of questions. <br />
-                    You will also be able to share your score! <br />
+                    You will also be able to share your score!
                     <br />
                     <br />
                     Future developments will allow users to test through several different quiz types as well as study <br />

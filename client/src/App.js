@@ -17,6 +17,8 @@ import Footer from './components/footer';
 // import login from './components/loginForm';
 // import signup from './components/signupForm';
 
+const [cards] = useState([])
+
 // const httpLink = createHttpLink({
 //   uri: '/graphql',
 // });

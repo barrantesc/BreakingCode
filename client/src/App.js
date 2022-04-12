@@ -9,8 +9,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/header';
-// import About from '../src/pages/about';
-import Game from '../src/pages/game';
+import About from '../src/pages/about';
+// import Game from '../src/pages/game';
 // import Scoreboard from '../src/pages/scoreboard';
 import Footer from './components/footer';
 // import Login from './components/login';
@@ -22,8 +22,8 @@ function App() {
     <>
       <Header />
       <switch>
-        {/* <About></About> */}
-        <Game></Game>
+        <About></About>
+        {/* <Game></Game> */}
       </switch>
 
       <Footer />

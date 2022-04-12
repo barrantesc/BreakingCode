@@ -8,14 +8,32 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // } from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
-// import Header from './components/header';
-// import About from '.components/about';
-// import Contact from '.components/contact';
+import Header from './components/header';
+// import About from '../src/pages/about';
 import Game from '../src/pages/game';
-// import Scoreboard from '.components/scoreboard';
-// import Footer from './components/footer';
-// import login from './components/loginForm';
-// import signup from './components/signupForm';
+// import Scoreboard from '../src/pages/scoreboard';
+import Footer from './components/footer';
+// import Login from './components/login';
+// import Signup from './components/signup';
+
+
+function App() {
+  return (
+    <>
+      <Header />
+      <switch>
+        {/* <About></About> */}
+        <Game></Game>
+      </switch>
+
+      <Footer />
+
+    </>
+  );
+}
+
+export default App;
+
 
 // const httpLink = createHttpLink({
 //   uri: '/graphql',
@@ -36,27 +54,27 @@ import Game from '../src/pages/game';
 //   cache: new InMemoryCache(),
 // });
 
-function App () {
-  return (
-    
-    // <ApolloProvider client={client}>
-     <> 
-     <Game></Game>
-      {/* <Router> */}
-        {/* <div className="flex-column justify-flex-start min-100-vh"> */}
-          {/* <Header /> */}
-          {/* <div className="container"> */}
-            {/* <Routes> */}
-            {/* pages */}
-            {/* <Route exact path="/game" component={Game} /> */}
-            {/* </Routes> */}
-          {/* </div> */}
-          {/* <Footer /> */}
-        {/* </div> */}
-      {/* </Router> */}
-    {/* // </ApolloProvider> */}
-    </>
-  );
-}
+// function App() {
+//   return (
+//     <ApolloProvider client={client}>
+//       <Router>
+//         <div className="flex-column justify-flex-start min-100-vh">
+//           <Header />
+//           <div className="container">
+//             <Switch>
+//               <Route exact path="/" component={About} />
+//               <Route exact path="/login" component={Login} />
+//               <Route exact path="/signup" component={Signup} />
+//               <Route exact path="/contact" component={Contact} />
+//               <Route exact path="/game" component={Game} />
+//               <Route exact path="/scoreboard" component={Scoreboard} />
+//             </Switch>
+//           </div>
+//           <Footer />
+//         </div>
+//       </Router>
+//     </ApolloProvider>
+//   );
+// }
 
- export default App;
+// export default App;

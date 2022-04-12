@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 :root {
   --emerald: #026635;
   --dark: #141414;
@@ -12,18 +13,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global */
+html {
+  min-height: 100%;
+  overflow: hidden;
+}
+
 body {
+  /* background-image: url('./assets/banner.png');
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+  background-position: 80%; */
   background-color: var(--dark);
 
 }
 
-/* Header */
-header {
-  background-color: transparent;
-}
-
 /* hero */
-.hero {
+/* .hero {
   background-image: url('./assets/banner.png');
   background-size: cover;
   display: flex;
@@ -32,13 +39,13 @@ header {
   align-items: flex-start;
   background-attachment: fixed;
   background-position: 80%;
-}
+} */
 
 .about-container {
   color: #fff;
   line-height: 1vw;
   font-size: .5vw;
-  margin: 15px auto 15px;
+  margin: auto;
   display: flex;
   align-content: center;
   max-width: 600px;
@@ -56,8 +63,44 @@ header {
   box-shadow: var(--jade) 4px solid;
 }
 
-.about-container {
-  box-shadow: var(--white) 4px solid;
+.about h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--white);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--white);
+  }
 }
 
 /* Game  */
@@ -95,91 +138,41 @@ button:hover {
   grid-gap: 20px;
 }
 
-/* Contact */
-#contact-section {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: 2% 0;
-  background-color: var(--emerald);
-  color: #f5f5f5;
-  opacity: 75%;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 1px var(--dark);
-}
-
-#contact-section div {
-  display: flex;
-  flex-direction: column;
-  align-content: stretch;
-  width: 100%;
-}
-
-#contact-section input,
-#contact-section textarea {
-  margin: 5px 0 15px;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid var(--emerald);
-}
-
-#contact-section input:focus,
-#contact-section textarea:focus {
-  outline: none;
-  border: 1.5px solid var(--emerald);
-}
-
-.submit-btn {
-  background-color: var(--dark);
-  padding: 8px;
-  color: white;
-  font-size: 15px;
-  border-radius: 5px;
-  border: none;
-}
-
-.submit-btn:hover {
-  background-color: transparent;
-}
-
-.error-msg p {
-  color: #ab3a2b;
-  font-style: italic;
-}
+/* Scoreboard */
 
 /* footer */
 .footer {
   color: var(--white);
-  position: relative;
+  position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
-  height: 20px;   /* Height of the footer */
-  margin: 20px auto 20px;
+  height: 20px;
+  /* Height of the footer */
   font-size: 10px;
-  background-color: var(--dark);
+  background-color: transparent;
+  /* background-color: var(--dark); */
 }
 
 .footer span {
   justify-content: space-around;
-  padding: 10px 5%; 
-} 
+  padding: 10px 5%;
+}
 
 .icon-link {
   text-decoration: none;
   font-size: 40px;
+  color: #458861;
 }
 
 .icon-link:hover {
-  color: var(--jade);
+  color: var(--emerald);
 }
 
 
 /* media queries */
 @media (max-width: 767px) {
-/* Brand-Logo */
+  /* Brand-Logo */
 
   /* game */
   .game-cards {
@@ -191,6 +184,6 @@ button:hover {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 20px;
-}
+  }
 
 }

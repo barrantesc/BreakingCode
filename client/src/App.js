@@ -10,13 +10,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/header';
-// import About from '../src/pages/about';
-// import Contact from '../src/pages/contact';
-import Game from '../src/pages/game';
+import About from '../src/pages/about';
+// import Game from '../src/pages/game';
 // import Scoreboard from '../src/pages/scoreboard';
 import Footer from './components/footer';
-// import Contact from '../src/pages/contact';
-// import Login from './pages/login';
 // import Login from './components/login';
 // import Signup from './components/signup';
 
@@ -26,7 +23,8 @@ function App() {
     <>
       <Header />
       <switch>
-        <Game></Game>
+        <About></About>
+        {/* <Game></Game> */}
       </switch>
 
       <Footer />
@@ -68,7 +66,7 @@ export default App;
 //               <Route exact path="/" component={About} />
 //               <Route exact path="/login" component={Login} />
 //               <Route exact path="/signup" component={Signup} />
-//               <Route exact path="/ccntact" component={Contact} />
+//               <Route exact path="/contact" component={Contact} />
 //               <Route exact path="/game" component={Game} />
 //               <Route exact path="/scoreboard" component={Scoreboard} />
 //             </Switch>

@@ -89,7 +89,7 @@ function Game () {
 
 
   return (
-    <div className="App">
+    <div className="game-cards">
       <h1> Breaking Code </h1>
       <button onClick={shuffleCards}> New Game </button>
 

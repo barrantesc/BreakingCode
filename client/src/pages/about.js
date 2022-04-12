@@ -9,10 +9,8 @@ function About() {
                     <h1>
                         Welcome to Breaking Code! <br />
                     </h1>
-                    <p class="line-1">
+                    <p>
                         If you are either getting ready to do a technical web development interview for the first time, <br />
-                    </p>
-                    <p class="line-2">
                         or even the 100th, then Breaking Code is the place to test your coding knowledge! <br />
                         {/* <br />
                     <br />

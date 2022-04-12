@@ -65,7 +65,6 @@ export default App;
 //               <Route exact path="/" component={About} />
 //               <Route exact path="/login" component={Login} />
 //               <Route exact path="/signup" component={Signup} />
-//               <Route exact path="/contact" component={Contact} />
 //               <Route exact path="/game" component={Game} />
 //               <Route exact path="/scoreboard" component={Scoreboard} />
 //             </Switch>

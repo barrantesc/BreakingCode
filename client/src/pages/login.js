@@ -1,59 +1,45 @@
 import React, { useState } from 'react';
-// bulma or bootstrap
-
-//import { loginUser } from '../utils/API';
-import Auth from '../utils/auth';
 import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations'
+import { LOGIN_USER } from '../utils/mutations';
+// bulma
 
-const LoginForm = () => {
-    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-    const [validated] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
+import Auth from '../utils/auth';
 
-    const [login] = useMutation(LOGIN_USER);
+const Login = (props) => {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error }] = useMutation(LOGIN_USER);
 
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setUserFormData({ ...userFormData, [name]: value });
-    };
+  // update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
-        // check if form has everything (as per react-bootstrap docs)
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
+  // submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-        try {
-            const { data } = await login({
-                variables: { ...userFormData }
-            });
-            // const response = await loginUser(userFormData);
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
 
-            // if (!response.ok) {
-            //   throw new Error('something went wrong!');
-            // }
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
+    }
 
-            // const { token, user } = await response.json();
-            // console.log(user);
-            Auth.login(data.login.token);
-        } catch (err) {
-            console.error(err);
-            setShowAlert(true);
-        }
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
 
-        setUserFormData({
-            username: '',
-            email: '',
-            password: '',
-        });
-    };
-
-    // change from bootstrap to bulma 
     return (
         <>
             <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -96,4 +82,4 @@ const LoginForm = () => {
     );
 };
 
-export default LoginForm;
+export default Login;

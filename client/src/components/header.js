@@ -1,40 +1,42 @@
 import React from "react";
-import Nav from "./nav";
-import Navbar from 'react-bulma-components/lib/components/navbar';
+// import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
-function Header(props) {
+function Header() {
 
     const logout = event => {
         event.preventDefault();
         Auth.logout();
-      };
-      
-    // destructure props
-    const {
-        navLinks,
-        currentDisplay,
-        setCurrentDisplay
-    } = props;
+    };
 
     return (
-        <Header>
-            <Navbar.Brand renderAs="a" href="#">
-                <img
-                    src="https://fontmeme.com/permalink/220407/329474fd1e71c06bb50b0ede5426ce55.png"
-                    alt="BreakingCode-logo"
-                    width="112"
-                    height="28"
-                />
-            </Navbar.Brand>
-            {/* passing nav links and current display settings on to header as props */}
-            <Nav>
-                navLinks={navLinks}
-                currentDisplay={currentDisplay}
-                setCurrentDisplay={setCurrentDisplay}
-            </Nav>
-        </Header>
-    )
+        <header className="header">
+            <div>
+                {/* <Link to="/"> */}
+                    <img className="logo"
+                        src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"
+                        alt="BreakingCode-logo"
+                    />
+                {/* </Link> */}
+                {/* <nav>
+                    {Auth.loggedIn() ? (
+                        <>
+                            <Link to="/game">Game</Link>
+                            <Link to="/scoreboard">Scoreboard</Link>
+                            <a href="/" onClick={logout}>
+                                Logout
+                            </a>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/login">Login</Link>
+                            <Link to="/signup">Signup</Link>
+                        </>
+                    )}
+                </nav> */}
+            </div>
+        </header>
+    );
 };
 
 export default Header;

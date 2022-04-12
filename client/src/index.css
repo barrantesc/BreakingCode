@@ -28,18 +28,9 @@ body {
 
 }
 
-
-/* hero */
-/* .hero {
-  background-image: url('./assets/banner.png');
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  background-attachment: fixed;
-  background-position: 80%;
-} */
+/* Header */
+.logo {
+max-width: 300px;}
 
 /* About */
 .about-container {
@@ -115,6 +106,44 @@ body {
   color: var(--white);
 }
 
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.game-title,
+.turns,
+.footer p {
+  cursor: default;
+}
+
+.game-title, .turns {
+  display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	font-weight: normal;
+	width: 100%;
+	text-align: center;	
+	font-size: 1.5rem;
+	background: linear-gradient(
+		-45deg, 
+		var(--jade) 25%, 
+		var(--white) 25%, 
+		var(--white) 50%, 
+		var(--jade) 50%, 
+		var(--jade) 75%, 
+		var(--white) 75%, 
+		var(--white));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-position: 0 0;
+	animation: stripes 1s linear infinite;
+}	
+
 /* Glow button Effect {
   --glow-color: rgb(217, 176, 255);
   --glow-spread-color: rgba(191, 123, 255, 0.781);
@@ -165,7 +194,7 @@ button:active {
 } */
 
 /* Hover Button Effect */
-Button  {
+Button {
   position: relative;
   padding: 1em 1.8em;
   outline: none;
@@ -174,94 +203,91 @@ Button  {
   color: var(--emerald);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 15px;
+  font-size: .7rem;
   overflow: hidden;
   transition: 0.2s;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
- }
- 
- button:hover {
+}
+
+button:hover {
   box-shadow: 0 0 10px var(--emerald), 0 0 25px var(--jade), 0 0 50px var(--white);
   transition-delay: 0.6s;
- }
- 
- button span {
+}
+
+button span {
   position: absolute;
- }
- 
- button span:nth-child(1) {
+}
+
+button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--white));
- }
- 
- button:hover span:nth-child(1) {
+}
+
+button:hover span:nth-child(1) {
   left: 100%;
   transition: 0.7s;
- }
- 
- button span:nth-child(3) {
+}
+
+button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--jade));
- }
- 
- button:hover span:nth-child(3) {
+}
+
+button:hover span:nth-child(3) {
   right: 100%;
   transition: 0.7s;
   transition-delay: 0.35s;
- }
- 
- button span:nth-child(2) {
+}
+
+button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg, transparent, var(--emerald));
- }
- 
- button:hover span:nth-child(2) {
+}
+
+button:hover span:nth-child(2) {
   top: 100%;
   transition: 0.7s;
   transition-delay: 0.17s;
- }
- 
- button span:nth-child(4) {
+}
+
+button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
   height: 100%;
   background: linear-gradient(360deg, transparent, var(--jade));
- }
- 
- button:hover span:nth-child(4) {
+}
+
+button:hover span:nth-child(4) {
   bottom: 100%;
   transition: 0.7s;
   transition-delay: 0.52s;
- }
- 
- button:active {
+}
+
+button:active {
   background: var(--emerald);
   background: linear-gradient(to top right, var(--emerald), var(--jade));
   color: #bfbfbf;
   box-shadow: 0 0 8px var(--emerald), 0 0 8px var(--jade), 0 0 8px var(--emerald);
   transition: 0.1s;
- }
- 
- button:active span:nth-child(1) 
- span:nth-child(2) 
- span:nth-child(2) 
- span:nth-child(2) {
+}
+
+button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
   transition: none;
   transition-delay: none;
- } 
- 
+}
+
 /* Glitch Button Effect */
 /* button,
 button::after {
@@ -358,17 +384,6 @@ button:hover::after {
  }
 } */
 
-.card-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
-}
-
-.game-title,
-.turns, .footer p {
-  cursor: default;
-}
 
 /* Single Card */
 .card {

@@ -1,13 +1,13 @@
 import React from "react";
 // import { Link } from 'react-router-dom';
-import Auth from '../utils/auth';
+// import Auth from '../utils/auth';
 
 function Header() {
 
-    const logout = event => {
-        event.preventDefault();
-        Auth.logout();
-    };
+    // const logout = event => {
+    //     event.preventDefault();
+    //     Auth.logout();
+    // };
 
     return (
         <header className="header">
@@ -40,3 +40,4 @@ function Header() {
 };
 
 export default Header;
+

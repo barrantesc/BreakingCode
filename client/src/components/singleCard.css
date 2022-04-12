@@ -7,32 +7,33 @@
     display: block;
     border: .05px solid white;
     box-shadow: 2px 2px 5px var(--emerald, 0.5);
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.card img:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
 /* front of card */
-.card
-.front {
+.card .front {
     transform: rotateY(90deg);
     transition: all ease-in 0.2s;
     position: absolute;
 }
 
-.flipped
-.front {
+.flipped .front {
     transform: rotateY(0deg);
     transition-delay: 0.2s
 }
 
 /* Back of card */
-.card
-.back {
+.card .back {
     transition: all ease-in 0.2s;
     transition-delay: 0.2s
 }
 
-.flipped
-.back {
+.flipped .back {
     transform: rotateY(90deg);
     transition-delay: 0s;
 }

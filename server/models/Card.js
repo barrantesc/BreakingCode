@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-​
+
 const cardSchema = new Schema(
     {
         uid: {
@@ -33,7 +33,6 @@ const cardSchema = new Schema(
         }
     }
 );
-​
-​
+
 const Cards = model("Card", cardSchema);
-module.exports = Card;
+module.exports = Cards;

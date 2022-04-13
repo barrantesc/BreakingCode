@@ -1,7 +1,7 @@
 const express = require('express');
 const {ApolloServer, gql} = require('apollo-server-express');
 const path = require('path');
-// require('dotenv').config();
+require('dotenv').config();
 
 
 const resolvers = require('./schemas/resolvers');
@@ -27,6 +27,7 @@ startServer()
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(require('./routes/routes'));
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {

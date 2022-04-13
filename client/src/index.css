@@ -32,6 +32,35 @@ body {
 .logo {
 max-width: 300px;}
 
+a {
+  color: var(--jade);
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  align-content: space-around;
+  display: flex;
+}
+
+nav a {
+  padding: 5px 0 2px;
+  font-size: 1rem;
+  margin: auto;
+  text-decoration: none;  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+
 /* About */
 .about-container {
   color: #fff;

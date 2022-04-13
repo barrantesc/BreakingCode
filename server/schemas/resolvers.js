@@ -1,7 +1,7 @@
 const { Cards } = require('../models');
 
 const resolvers = {
-    Search: {
+    Query: {
       cards: async () => {
         return await Cards.find({}).populate('Card').populate({
           path: 'Card',

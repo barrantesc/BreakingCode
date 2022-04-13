@@ -2,6 +2,8 @@
 import React from 'react'
 import "./singleCard.css"
 import Cover from '../assets/banner.png'
+import { QUERY_CARD } from '../utils/queries'
+import { useQuery } from '@apollo/client'
 // import ReactCardFlip from 'react-card-flip';
 
 export default function singleCard( {card, handleChoice, flipped, disabled }) {
@@ -12,6 +14,8 @@ export default function singleCard( {card, handleChoice, flipped, disabled }) {
         }
     }
 
+    const {loading, data} = useQuery(QUERY_CARD)
+    console.log(loading, data)
   return (
     
     <div className='card'>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import {
-//   ApolloClient,
-//   InMemoryCache,
-//   ApolloProvider,
-//   createHttpLink,
-// } from '@apollo/client';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 // import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/header';
@@ -16,10 +16,14 @@ import Footer from './components/footer';
 // import Login from './components/login';
 // import Signup from './components/signup';
 
+const client = new ApolloClient({
+  // link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <>
+    <ApolloProvider client={client}>
       <Header />
       <switch>
         {/* <About></About> */}
@@ -28,7 +32,7 @@ function App() {
 
       <Footer />
 
-    </>
+    </ApolloProvider>
   );
 }
 
@@ -49,10 +53,6 @@ export default App;
 //   };
 // });
 
-// const client = new ApolloClient({
-//   link: authLink.concat(httpLink),
-//   cache: new InMemoryCache(),
-// });
 
 // function App() {
 //   return (

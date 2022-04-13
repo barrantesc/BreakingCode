@@ -3,8 +3,9 @@ const {ApolloServer, gql} = require('apollo-server-express');
 const path = require('path');
 // require('dotenv').config();
 
-// const typeDefs = gql;
-const {typeDefs, resolvers} = require('./schemas');
+
+const resolvers = require('./schemas/resolvers');
+const typeDefs = require('./schemas/typeDefs');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 

@@ -57,6 +57,7 @@
     "inherits": "^2.0.4",
     "ip": "^1.1.5",
     "ipaddr.js": "^1.9.1",
+    "jsonwebtoken": "^8.5.1",
     "kareem": "^2.3.5",
     "lodash.sortby": "^4.7.0",
     "loglevel": "^1.8.0",

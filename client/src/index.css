@@ -75,6 +75,9 @@ nav a:hover {
 }
 input {
   margin: auto;
+  border: #141414;
+  border-radius: 5px;
+  font-size: .8rem;
 }
 
 input:focus {

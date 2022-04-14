@@ -1,7 +1,6 @@
 const faker = require('faker'); /* https://fakerjs.dev/api/ */
 const db = require('../config/connection');
-const { Cards, User } = require('../models/Card.js');
-
+const Cards = require('../models/Card.js');
 
 /* Array holding a collection of Card Objects
     **Note:     All paths to files should be in consideration of their location of render within the Client
@@ -15,18 +14,6 @@ const { Cards, User } = require('../models/Card.js');
         topic:      topic for card 
     }
 */
-// create user data
-const userData = [];
-
-for (let i = 0; i < 50; i += 1) {
-  const username = faker.internet.userName();
-  const email = faker.internet.email(username);
-  const password = faker.internet.password();
-
-  userData.push({ username, email, password });
-}
-
-// create card data
 const cardSeedData = [
     {
         "content": "What does HTML stand for?",
@@ -1295,8 +1282,6 @@ db.once('open', async () => {
 
     //-- Purge local data to reset
     await Cards.remove({});
-    await User.deleteMany({});
-
 
     /* CARDS - Create ALL Cards in database ----------------------------------*/
     //-- Printing what the goal to make it

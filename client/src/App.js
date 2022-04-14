@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -17,30 +17,14 @@ import Login from '../src/pages/login';
 import Signup from '../src/pages/signup';
 
 
-// function App() {
-//   return (
-//     <>
-//       <Header />
-//       <switch>
-//         {/* <About></About> */}
-//         <Game></Game>
-//       </switch>
-
-//       <Footer />
-
-//     </>
-//   );
-// }
-
-// export default App;
-
-
 const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
 const authLink = setContext((_, { headers }) => {
+    // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
+    // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
@@ -61,15 +45,12 @@ function App() {
       <Router>
         <div>
           <Header />
-          <div>
-            <Routes>
-              <Route exact path="/about" component={About} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/game" component={Game} />
-              {/* <Route exact path="/scoreboard" component={Scoreboard} /> */}
-            </Routes>
-          </div>
+          <Routes>
+            <Route  path="/" element={<About />} />
+            <Route  path="/game" element={<Game />} />
+            <Route  path="/login" element={<Login />} />
+            <Route  path="/signup" element={<Signup />} />
+          </Routes>
           <Footer />
         </div>
       </Router>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleCard from '../components/SingleCard';
 import '../index.css'
+// import Auth from '../utils/auth';
 
 
 const cardImages = [
@@ -13,6 +14,7 @@ const cardImages = [
 ]
 
 function Game() {
+
   //Store cards
   const [cards, setCards] = useState([])
   // User turns
@@ -86,6 +88,8 @@ function Game() {
   useEffect(() => {
     shuffleCards()
   }, [])
+
+  // const loggedIn = Auth.loggedIn();
 
 
   return (

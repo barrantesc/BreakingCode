@@ -12,27 +12,26 @@ function Header() {
     return (
         <header className="header">
             <div>
-                <Link to="/about">
+                <nav className="text-center">
+                <Link to="/">
                     <img className="logo"
                         src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"
                         alt="BreakingCode-logo"
                     />
                 </Link>
-                <nav>
-                <Link to="/about">About</Link>
-                    {/* {Auth.loggedIn() ? ( */}
+                    {Auth.loggedIn() ? (
                         <>
-                            <Link to="/game">Game</Link>
+                            <Link to="/game">Me</Link>
                             <a href="/" onClick={logout}>
                                 Logout
                             </a>
                         </>
-                    {/* ) : ( */}
+                    ) : (
                         <>
                             <Link to="/login">Login</Link>
                             <Link to="/signup">Signup</Link>
                         </>
-                    
+                    )}
                 </nav>
             </div>
         </header>
@@ -40,4 +39,3 @@ function Header() {
 };
 
 export default Header;
-

@@ -30,7 +30,8 @@ body {
 
 /* Header */
 .logo {
-max-width: 300px;}
+  max-width: 300px;
+}
 
 a {
   color: var(--jade);
@@ -47,7 +48,8 @@ nav a {
   padding: 5px 0 2px;
   font-size: 1rem;
   margin: auto;
-  text-decoration: none;  list-style: none;
+  text-decoration: none;
+  list-style: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -61,6 +63,36 @@ nav a:hover {
   color: var(--white);
 }
 
+/* Login/Signup */
+.signup-form,
+.login-form {
+  border-radius: 20px;
+  background-color: var(--emerald);
+  padding: 20px;
+  opacity: 75%;
+  font-size: 1rem;
+  margin: auto;
+}
+input {
+  margin: auto;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid var(--jade);
+}
+
+/* .submit-btn {
+    background-color: var(--sage);
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+  }
+   */
+
+
 /* About */
 .about-container {
   color: #fff;
@@ -71,9 +103,9 @@ nav a:hover {
   max-width: 600px;
   cursor: default;
   align-items: center;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
 }
 
 .about {
@@ -149,79 +181,31 @@ nav a:hover {
   cursor: default;
 }
 
-.game-title, .turns {
+.game-title,
+.turns {
   display: flex;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	font-weight: normal;
-	width: 100%;
-	text-align: center;	
-	font-size: 1.5rem;
-	background: linear-gradient(
-		-45deg, 
-		var(--jade) 25%, 
-		var(--white) 25%, 
-		var(--white) 50%, 
-		var(--jade) 50%, 
-		var(--jade) 75%, 
-		var(--white) 75%, 
-		var(--white));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-position: 0 0;
-	animation: stripes 1s linear infinite;
-}	
-
-/* Glow button Effect {
-  --glow-color: rgb(217, 176, 255);
-  --glow-spread-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
-  border: .25em solid var(--glow-color);
-  padding: 1em 3em;
-  color: var(--glow-color);
-  font-size: 15px;
-  font-weight: bold;
-  background-color: var(--btn-color);
-  border-radius: 1em;
-  outline: none;
-  box-shadow: 0 0 1em .25em var(--glow-color),
-    0 0 4em 1em var(--glow-spread-color),
-    inset 0 0 .75em .25em var(--glow-color);
-  text-shadow: 0 0 .5em var(--glow-color);
-  position: relative;
-  transition: all 0.3s;
-}
-
-button::after {
-  pointer-events: none;
-  content: "";
-  position: absolute;
-  top: 120%;
-  left: 0;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-weight: normal;
   width: 100%;
-  background-color: var(--glow-spread-color);
-  filter: blur(2em);
-  opacity: .7;
-  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(-45deg,
+      var(--jade) 25%,
+      var(--white) 25%,
+      var(--white) 50%,
+      var(--jade) 50%,
+      var(--jade) 75%,
+      var(--white) 75%,
+      var(--white));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
 }
-
-button:hover {
-  color: var(--btn-color);
-  background-color: var(--glow-color);
-  box-shadow: 0 0 1em .25em var(--glow-color),
-    0 0 4em 2em var(--glow-spread-color),
-    inset 0 0 .75em .25em var(--glow-color);
-}
-
-button:active {
-  box-shadow: 0 0 0.6em .25em var(--glow-color),
-    0 0 2.5em 2em var(--glow-spread-color),
-    inset 0 0 .5em .25em var(--glow-color);
-} */
 
 /* Hover Button Effect */
 Button {

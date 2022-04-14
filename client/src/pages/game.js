@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SingleCard from '../components/SingleCard';
+import axios from 'axios';
 import '../index.css'
 // import Auth from '../utils/auth';
 
@@ -13,8 +14,16 @@ const cardImages = [
   { "src": "/img/sample6.jpeg", matched: false }
 ]
 
-function Game() {
+// const cardSet = () => {
+//   const [cards, setCards] = useState("")
+// }
 
+// const cardData = async () => {
+
+// }
+
+function Game() {
+  
   //Store cards
   const [cards, setCards] = useState([])
   // User turns
@@ -23,7 +32,8 @@ function Game() {
   const [choiceOne, setChoiceOne] = useState(null)
   const [choiceTwo, setChoiceTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
-
+  const [data, setData] = useState([])
+  
   // Shuffle cards
   const shuffleCards = () => {
     // duplicate cards once
@@ -40,12 +50,19 @@ function Game() {
     setTurns(0)
   }
 
-  console.log(cards, turns)
+  // async function getData() {
+  //   const res = await fetch('http://localhost:3001/api/cards')
+  //   const data = await res.json()
+
+  //   return data;
+  // }
+
+  // console.log(cards, turns)
 
   //handle a choice
   const handleChoice = (card) => {
     choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
-    console.log(card)
+    // console.log(card)
   }
 
   // compare two selected cards 
@@ -73,7 +90,11 @@ function Game() {
     }
   }, [choiceOne, choiceTwo])
 
-  console.log(cards)
+  useEffect(() => {
+    axios.get('http://localhost:3001/api/cards').then(data => setData(data.data))
+  }, [])
+
+  // console.log(cards)
 
   // reset choices & increase turn
   const resetTurn = () => {
@@ -91,7 +112,6 @@ function Game() {
 
   // const loggedIn = Auth.loggedIn();
 
-
   return (
     <div className="game-cards">
       <h1 className='game-title'> Breaking Code </h1>
@@ -106,6 +126,7 @@ function Game() {
           <SingleCard
             key={card.id}
             card={card}
+            data={data}
             handleChoice={handleChoice}
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}>

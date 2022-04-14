@@ -41,7 +41,7 @@ a {
 nav {
   width: 100%;
   align-content: space-around;
-  display: flex;
+  display: flex;  
 }
 
 nav a {
@@ -72,7 +72,9 @@ nav a:hover {
   opacity: 75%;
   font-size: 1rem;
   margin: auto;
+  max-width: 600px;
 }
+
 input {
   margin: auto;
   border: #141414;
@@ -403,7 +405,7 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 
 /* media queries */
 @media (max-width: 767px) {
-  /* Brand-Logo */
+/* header */
 
   /* game */
   .game-cards {
@@ -417,4 +419,10 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
     grid-gap: 20px;
   }
 
+
+  /* login/signup */
+.login-form,
+.signup-form {
+  width: 95%;
+}
 }

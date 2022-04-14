@@ -19,9 +19,12 @@ function Header() {
                         alt="BreakingCode-logo"
                     />
                 </Link>
+                <Link to="/">About</Link>
+                <Link to="/game">Game</Link>
+
                     {Auth.loggedIn() ? (
                         <>
-                            <Link to="/game">Me</Link>
+                            <Link to="/game"></Link>
                             <a href="/" onClick={logout}>
                                 Logout
                             </a>

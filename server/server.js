@@ -14,6 +14,7 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
@@ -30,6 +31,7 @@ startServer()
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(require('./routes/routes'));
+
 
 //HTTP request logger
 app.use(morgan('tiny'));

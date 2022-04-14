@@ -28,7 +28,7 @@ body {
 }
 
 /* Header */
-header { 
+header {
   padding-bottom: 20px;
 }
 
@@ -44,7 +44,7 @@ a {
 nav {
   width: 100%;
   align-content: space-around;
-  display: flex;  
+  display: flex;
 }
 
 nav a {
@@ -80,8 +80,9 @@ nav a:hover {
   text-align: center;
   align-content: center;
   max-width: 350px;
-  
+
 }
+
 .link {
   color: #303030;
 }
@@ -103,12 +104,13 @@ input:focus {
   outline: none;
   border: 1.5px solid var(--jade);
 }
- 
+
 .error-text {
   color: #ab3a2b;
   font-style: italic;
   font-size: .8rem;
 }
+
 /* About */
 .about-container {
   color: #fff;
@@ -198,7 +200,8 @@ input:focus {
 }
 
 .game-title,
-.turns, .login-title,
+.turns,
+.login-title,
 .signup-title {
   display: flex;
   align-items: center;
@@ -416,7 +419,7 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 
 /* media queries */
 @media (max-width: 767px) {
-/* header */
+  /* header */
 
   /* game */
   .game-cards {
@@ -432,7 +435,7 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 
 
   /* login/signup */
-/* .login-form,
+  /* .login-form,
 .signup-form {
   width: 95%;
 } */

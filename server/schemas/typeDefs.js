@@ -10,7 +10,7 @@ const typeDefs = gql`
     topic: String
   }
     type Query {
-        cards: [Card]
+        cards: Card
         class(id: ID!): Card
       }`;
 

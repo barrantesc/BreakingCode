@@ -1,7 +1,10 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
 const path = require('path');
-require('dotenv').config();
+const cors = require('cors');
+
+// do we need?
+// require('dotenv').config();
 
 
 const { typeDefs, resolvers } = require('./schemas');
@@ -10,6 +13,8 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+app.use(cors())
+
 
 const startServer = async () => {
   const server = new ApolloServer({

@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require('cors');
 
 // do we need?
-// require('dotenv').config();
+require('dotenv').config();
 
 
 const { typeDefs, resolvers } = require('./schemas');

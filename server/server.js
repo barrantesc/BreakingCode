@@ -1,7 +1,10 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
+const morgan = require('morgan'); 
 const path = require('path');
-require('dotenv').config();
+
+// do we need?
+// require('dotenv').config();
 
 
 const { typeDefs, resolvers } = require('./schemas');
@@ -28,10 +31,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(require('./routes/routes'));
 
+//HTTP request logger
+app.use(morgan('tiny'));
+
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
+
+//Routes
+app.get('/api', (req, res) => {
+  const data = {
+  username: 'potato',
+  age: 2
+ };
+ res.json(data);
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));

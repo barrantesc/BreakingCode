@@ -2,6 +2,7 @@ const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
 const morgan = require('morgan'); 
 const path = require('path');
+const cors = require('cors');
 
 // do we need?
 // require('dotenv').config();
@@ -13,6 +14,8 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+app.use(cors())
+
 
 const routes = require('./routes/routes.js')
 

@@ -1,6 +1,11 @@
+// Import npm  Packages
 const express = require('express');
 const {ApolloServer, gql} = require('apollo-server-express');
+const mongoose = require('mongoose');
+const morgan = require('express');
 const path = require('path');
+
+// needed? 
 require('dotenv').config();
 
 
@@ -11,6 +16,23 @@ const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+// Connect to MongoDB Atlas
+const MongoDB_URL = 'mongodb+srv://TrevorLong:TheBigOof992@cluster0.ywscg.mongodb.net/Cards?retryWrites=true&w=majority'
+
+mongoose.connect(MongoDB_URL || 'mongodb://localhost/breaking_code', {
+  userNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
+mongoose.connection.on('connected', () => {
+  console.log('Mongoose is connected!!')
+});
+
+
+// HTTP request logger
+app.use(morgan('tiny'));
+
 
 const startServer = async () => {
   const server = new ApolloServer({
@@ -34,9 +56,20 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
+
+// Routes
+app.get('/api', (req, res) => {
+  const data = {
+    username: 'potato',
+    age: 2
+  };
+  res.json(data);
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
+
 
 db.once('open', () => {
   app.listen(PORT, () => {

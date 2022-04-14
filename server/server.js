@@ -1,18 +1,15 @@
 const express = require('express');
 const {ApolloServer} = require('apollo-server-express');
-const morgan = require('morgan'); 
 const path = require('path');
+require('dotenv').config();
 
-// do we need?
-// require('dotenv').config();
+
 const { typeDefs, resolvers } = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
-
-const routes = require('./routes/routes.js')
 
 const startServer = async () => {
   const server = new ApolloServer({
@@ -31,24 +28,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(require('./routes/routes'));
 
-
-//HTTP request logger
-app.use(morgan('tiny'));
-app.use('/api', routes)
-
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-
-//Routes
-// app.get('/api', (req, res) => {
-//   const data = {
-//   username: 'potato',
-//   age: 2
-//  };
-//  res.json(data);
-// });
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));

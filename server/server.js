@@ -14,6 +14,7 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+const routes = require('./routes/routes.js')
 
 const startServer = async () => {
   const server = new ApolloServer({
@@ -35,6 +36,7 @@ app.use(require('./routes/routes'));
 
 //HTTP request logger
 app.use(morgan('tiny'));
+app.use('/api', routes)
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {

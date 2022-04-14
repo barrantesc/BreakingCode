@@ -9,7 +9,6 @@ export const GET_ME = gql`
         }
     }
 `;
-import { gql } from "@apollo/client"
 export const QUERY_CARD = gql`{
         cards{
             _id

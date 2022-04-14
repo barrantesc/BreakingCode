@@ -1,26 +1,19 @@
 {
-  "dependencies": {
-    "@apollo/client": "^3.5.10",
-    "@emailjs/browser": "^3.5.0",
-    "bulma": "^0.9.3",
-    "jsonwebtoken": "^8.5.1"
-  },
-  "name": "breakingcode",
-  "description": "MB ## Purpose A memory game application that makes technical interview questions fun by matching cards. The user must match the question with the correct answer in order to move forward.",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/barrantesc/BreakingCode.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/barrantesc/BreakingCode/issues"
-  },
-  "homepage": "https://github.com/barrantesc/BreakingCode#readme"
-}
+    "name": "breakingCode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "seed": "cd server && npm run seed",
+      "build": "cd client && npm run build",
+      "heroku-postbuild": "cd client && npm i && cd ../server && npm run seed && cd ../client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+    }
+  }

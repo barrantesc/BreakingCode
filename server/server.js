@@ -4,8 +4,7 @@ const path = require('path');
 require('dotenv').config();
 
 
-const resolvers = require('./schemas/resolvers');
-const typeDefs = require('./schemas/typeDefs');
+const { typeDefs, resolvers } = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 
@@ -18,6 +17,7 @@ const startServer = async () => {
     resolvers,
     context: authMiddleware,
   });
+  
   await server.start();
   server.applyMiddleware({ app });
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);

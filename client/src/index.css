@@ -72,32 +72,40 @@ nav a:hover {
   opacity: 75%;
   font-size: 1rem;
   margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
   max-width: 600px;
+  
+}
+.link {
+  color: #303030;
+}
+
+.link:hover {
+  color: var(--white);
 }
 
 input {
   margin: auto;
-  border: #141414;
+  border: var(--dark) solid 1px;
+  background-color: var(--white);
   border-radius: 5px;
-  font-size: .8rem;
+  font-size: .6rem;
+  padding: 5px;
 }
 
 input:focus {
   outline: none;
   border: 1.5px solid var(--jade);
 }
-
-/* .submit-btn {
-    background-color: var(--sage);
-    padding: 8px;
-    color: white;
-    font-size: 15px;
-    border-radius: 5px;
-    border: none;
-  }
-   */
-
-
+ 
+.error-text {
+  color: #ab3a2b;
+  font-style: italic;
+  font-size: .8rem;
+}
 /* About */
 .about-container {
   color: #fff;
@@ -187,7 +195,8 @@ input:focus {
 }
 
 .game-title,
-.turns {
+.turns, .login-title,
+.signup-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -421,8 +430,8 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 
 
   /* login/signup */
-.login-form,
+/* .login-form,
 .signup-form {
   width: 95%;
-}
+} */
 }

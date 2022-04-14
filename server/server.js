@@ -5,8 +5,6 @@ const path = require('path');
 
 // do we need?
 // require('dotenv').config();
-
-
 const { typeDefs, resolvers } = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
@@ -40,13 +38,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //Routes
-app.get('/api', (req, res) => {
-  const data = {
-  username: 'potato',
-  age: 2
- };
- res.json(data);
-});
+// app.get('/api', (req, res) => {
+//   const data = {
+//   username: 'potato',
+//   age: 2
+//  };
+//  res.json(data);
+// });
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));

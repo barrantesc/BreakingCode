@@ -1,16 +1,19 @@
 // Import npm  Packages
 const express = require('express');
+<<<<<<< HEAD
 const {ApolloServer, gql} = require('apollo-server-express');
 const mongoose = require('mongoose');
 const morgan = require('express');
+=======
+const {ApolloServer} = require('apollo-server-express');
+>>>>>>> upstream/develop
 const path = require('path');
 
 // needed? 
 require('dotenv').config();
 
 
-const resolvers = require('./schemas/resolvers');
-const typeDefs = require('./schemas/typeDefs');
+const { typeDefs, resolvers } = require('./schemas');
 const {authMiddleware} = require('./utils/auth');
 const db = require('./config/connection');
 

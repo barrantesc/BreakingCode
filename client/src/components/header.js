@@ -12,7 +12,7 @@ function Header() {
     return (
         <header className="header">
             <div>
-                <nav className="text-center">
+                <nav>
                 <Link to="/">
                     <img className="logo"
                         src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"

@@ -25,10 +25,13 @@ body {
   background-attachment: fixed;
   background-position: 80%; */
   background-color: var(--dark);
-
 }
 
 /* Header */
+header { 
+  padding-bottom: 20px;
+}
+
 .logo {
   max-width: 300px;
 }
@@ -76,7 +79,7 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   align-content: center;
-  max-width: 600px;
+  max-width: 350px;
   
 }
 .link {
@@ -363,15 +366,14 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 /* footer */
 .footer {
   color: var(--white);
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
-  height: 20px;
+  height: 30px;
   /* Height of the footer */
   font-size: 10px;
   background-color: transparent;
-  /* background-color: var(--dark); */
 }
 
 .footer span {

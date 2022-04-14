@@ -15,9 +15,6 @@
         "build": "cd client && npm run build",
         "heroku-postbuild": "cd client && npm i && cd ../server && npm run seed && cd ../client && npm run build"
     },
-    "engines": {
-        "node": "10.16.0"
-    },
     "keywords": [],
     "author": "",
     "license": "ISC",

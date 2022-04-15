@@ -1,7 +1,14 @@
 {
     "name": "breakingcode-server",
     "version": "1.0.0",
+    "description": "",
+    "proxy": "http://localhost:3001",
     "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "watch": "nodemon",
+        "seed": "node db/seeds.js"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",

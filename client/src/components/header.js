@@ -12,26 +12,31 @@ function Header() {
     return (
         <header className="header">
             <div>
-                <nav className="text-center">
-                <Link to="/">
-                    <img className="logo"
-                        src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"
-                        alt="BreakingCode-logo"
-                    />
-                </Link>
-                    {Auth.loggedIn() ? (
-                        <>
-                            <Link to="/game">Me</Link>
-                            <a href="/" onClick={logout}>
-                                Logout
-                            </a>
-                        </>
-                    ) : (
-                        <>
-                            <Link to="/login">Login</Link>
-                            <Link to="/signup">Signup</Link>
-                        </>
-                    )}
+                <nav>
+                    <Link to="/">
+                        <img className="logo"
+                            src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"
+                            alt="BreakingCode-logo"
+                        />
+                    </Link>
+                    <div className="header-right">
+                        <Link to="/">About</Link>
+                        <Link to="/game">Game</Link>
+
+                        {Auth.loggedIn() ? (
+                            <>
+                                <Link to="/game"></Link>
+                                <a href="/" onClick={logout}>
+                                    Logout
+                                </a>
+                            </>
+                        ) : (
+                            <>
+                                <Link to="/login">Login</Link>
+                                <Link to="/signup">Signup</Link>
+                            </>
+                        )}
+                    </div>
                 </nav>
             </div>
         </header>

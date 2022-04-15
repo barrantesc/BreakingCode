@@ -1,4 +1,5 @@
 # BreakingCode
+Link to Heroku App: https://fathomless-retreat-80150.herokuapp.com/game
 
 ## Purpose
 A memory game application that makes technical interview questions fun by matching cards. The user must match the question with the correct answer in order to move forward.
@@ -51,7 +52,7 @@ npm install
 
 
 ## Application
-[![screenshot of working app](link to img)](url)
+![screenshot of working app](link to img)](https://github.com/barrantesc/BreakingCode/blob/5829ddf2cf91cb199e72aeec07d55038ba86fab4/client/public/images/breaking-code.png)
 
 ## Contribution
 * Made with ❤️ by Ashley Park, Connie Barrantes, Melany Pietrowski and Trevor Long

@@ -322,10 +322,13 @@ button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-chi
 .card {
   position: relative;
   cursor: pointer; 
-  border: 1px solid #026635;
-  background: url("./assets/banner.png") center center no-repeat white;
+  border: 1px solid var(--emerald);
+  border-radius: 15px;
+  background: url("./assets/banner.png") center center no-repeat var(--dark);
   background-size: cover;
-  height: 100px;
+  color: var(--white);
+  box-shadow: 2px 2px 5px var(--emerald, 0.5);
+  height: 150px;
 }
 
 .card img{

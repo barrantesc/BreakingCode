@@ -52,7 +52,7 @@ npm install
 
 
 ## Application
-[![screenshot of working app](link to img)](https://github.com/barrantesc/BreakingCode/blob/5829ddf2cf91cb199e72aeec07d55038ba86fab4/client/public/images/breaking-code.png)
+![screenshot of working app](link to img)](https://github.com/barrantesc/BreakingCode/blob/5829ddf2cf91cb199e72aeec07d55038ba86fab4/client/public/images/breaking-code.png)
 
 ## Contribution
 * Made with ❤️ by Ashley Park, Connie Barrantes, Melany Pietrowski and Trevor Long

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/BreakingCode/static/css/main.4a951ce7.chunk.css",
+    "main.js": "/BreakingCode/static/js/main.23b35fe9.chunk.js",
+    "main.js.map": "/BreakingCode/static/js/main.23b35fe9.chunk.js.map",
+    "runtime-main.js": "/BreakingCode/static/js/runtime-main.23f774bd.js",
+    "runtime-main.js.map": "/BreakingCode/static/js/runtime-main.23f774bd.js.map",
+    "static/js/2.b986eb81.chunk.js": "/BreakingCode/static/js/2.b986eb81.chunk.js",
+    "static/js/2.b986eb81.chunk.js.map": "/BreakingCode/static/js/2.b986eb81.chunk.js.map",
+    "static/js/3.3d406d45.chunk.js": "/BreakingCode/static/js/3.3d406d45.chunk.js",
+    "static/js/3.3d406d45.chunk.js.map": "/BreakingCode/static/js/3.3d406d45.chunk.js.map",
+    "index.html": "/BreakingCode/index.html",
+    "static/css/main.4a951ce7.chunk.css.map": "/BreakingCode/static/css/main.4a951ce7.chunk.css.map",
+    "static/js/2.b986eb81.chunk.js.LICENSE.txt": "/BreakingCode/static/js/2.b986eb81.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/BreakingCode/static/media/banner.cd9488f5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23f774bd.js",
+    "static/js/2.b986eb81.chunk.js",
+    "static/css/main.4a951ce7.chunk.css",
+    "static/js/main.23b35fe9.chunk.js"
+  ]
+}

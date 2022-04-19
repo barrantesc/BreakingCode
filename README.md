@@ -69,5 +69,5 @@ npm install
  - Melany Pietrowski: [Email](mailto:Melany14@gmail.com).
   View more of my work at [Github](https://github.com/Melpie10)
 
- - Trevor Long: [Email](mailto:).
+ - Trevor Long: [Email](mailto:trevorlong992@gmail.com).
   View more of my work at [Github](https://github.com/TrevorL0ng)
